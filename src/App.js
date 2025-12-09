@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Translator from "./pages/Translator";
+import RandomString from "./pages/RandomString";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true); 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className={
+        darkMode
+          ? "bg-black text-white min-h-screen transition-all"
+          : "bg-[#e0e0e0] text-black min-h-screen transition-all"
+      }
+    >
+      <BrowserRouter>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Routes>
+          <Route path="/translator" element={<Translator darkMode={darkMode} />} />
+          <Route path="/random" element={<RandomString darkMode={darkMode} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
