@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Codex Internship – Slab 1
+## Text Translator & Random String Generator (React + Tailwind)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is developed as part of the Codex Internship (Front-End – Slab 1).  
+It includes two main tools:
 
-## Available Scripts
+1. Text Translator (English to Indian languages)
+2. Random String Generator (secure password/string generator)
 
-In the project directory, you can run:
+The project uses React, Tailwind CSS, React Router, and RapidAPI.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Text Translator
+- Translates English text to multiple Indian languages:
+  Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, Gujarati, Marathi.
+- Uses Free Google Translator API from RapidAPI.
+- Output shown in a styled glowing text box.
+- Handles invalid inputs and API errors.
+- Fully supports Dark/Light theme.
 
-### `npm test`
+### 2. Random String Generator
+- Generates random strings based on the length entered by the user.
+- Supports uppercase, lowercase, numbers, and symbols.
+- Shows error message for invalid lengths.
+- Styled output box with glowing UI.
+- Uses React hooks (useState, useCallback).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. UI and Routing
+- Dark/Light mode toggle using a custom switch.
+- Active navbar link is underlined.
+- Clean glowing modern UI using Tailwind CSS.
+- Routing using React Router DOM:
+  - /translator
+  - /random
+- Default route automatically opens Translator.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React (Create React App)
+- Tailwind CSS
+- React Router DOM
+- RapidAPI (Free Google Translator)
+- JavaScript (ES6+)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installation and Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository
+  git clone https://github.com/PraneethSai1810/internship-project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate to project folder
+cd codex-slab1
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Install dependencies
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Start the development server
+npm start
 
-## Learn More
+Application runs at:
+http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Environment Variables (IMPORTANT)
 
-### Code Splitting
+To use the Translator API, you must provide your own RapidAPI key.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Create a `.env` file in the project root.
+2. Add the following line:
+REACT_APP_RAPID_KEY=your_api_key_here
 
-### Analyzing the Bundle Size
+3. Restart the development server:
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. The API key is accessed inside the code using:
 
-### Making a Progressive Web App
+Note:
+The `.env` file is ignored by GitHub, so your key stays private.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Folder Structure
+src/
+components/
+Navbar.jsx
+pages/
+Translator.jsx
+RandomString.jsx
+App.js
+index.js
+index.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Internship Requirements Covered
 
-### `npm run build` fails to minify
+- Text Translator using an API.
+- Random string/password generator using JavaScript and React hooks.
+- Two-page navigation with React Router.
+- Dark/Light mode implementation.
+- Fully responsive glowing UI using Tailwind CSS.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## License
+
+This project is created for educational and internship purposes.
