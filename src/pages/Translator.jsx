@@ -12,7 +12,7 @@ const Translator = ({ darkMode }) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-RapidAPI-Key": "f894e5247cmsheeb6ed5529f0663p169c83jsn622c4ae3ba63",
+        "X-RapidAPI-Key": process.env.REACT_APP_RAPID_KEY,
         "x-rapidapi-host": "free-google-translator.p.rapidapi.com",
       },
       body: '{"translate":"rapidapi"}'
