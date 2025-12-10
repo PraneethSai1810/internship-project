@@ -1,3 +1,5 @@
+Live Demo: https://langtranslator-two.vercel.app/translator
+
 # Codex Internship – Slab 1
 ## Text Translator & Random String Generator (React + Tailwind)
 
